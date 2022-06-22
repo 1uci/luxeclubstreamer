@@ -1,20 +1,3 @@
-"""
-VideoPlayerBot, Telegram Video Chat Bot
-Copyright (c) 2021  Asm Safone <https://github.com/AsmSafone>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>
-"""
 
 import os
 import re
@@ -92,7 +75,7 @@ async def end_callbacc(client, CallbackQuery):
     await CallbackQuery.message.delete()
 
 
-@Client.on_message(filters.command(["stream", f"stream@{USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["stream", f"stream@{USERNAME}"]) & filters.group)
 @authorized_users_only
 async def stream(client, m: Message):
     msg = await m.reply_text("🔄 `Processing ...`")
@@ -245,7 +228,7 @@ async def stream(client, m: Message):
     )
 
 
-@Client.on_message(filters.command(["pause", f"pause@{USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["pause", f"pause@{USERNAME}"]) & filters.group)
 @authorized_users_only
 async def pause(_, m: Message):
     chat_id = m.chat.id
@@ -262,7 +245,7 @@ async def pause(_, m: Message):
         await m.reply_text("❌ **Noting Is Streaming !**")
 
 
-@Client.on_message(filters.command(["resume", f"resume@{USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["resume", f"resume@{USERNAME}"]) & filters.group)
 @authorized_users_only
 async def resume(_, m: Message):
     chat_id = m.chat.id
@@ -279,7 +262,7 @@ async def resume(_, m: Message):
         await m.reply_text("❌ **Noting Is Streaming !**")
 
 
-@Client.on_message(filters.command(["endstream", f"endstream@{USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(filters.command(["endstream", f"endstream@{USERNAME}"]) & filters.group)
 @authorized_users_only
 async def endstream(client, m: Message):
     msg = await m.reply_text("🔄 `Processing ...`")
