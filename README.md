@@ -1,0 +1,77 @@
+An Telegram Bot By [@Lucif3r23](https://t.me/Lucif3r23) To Stream Videos in Telegram Voice Chat.
+
+## Main Features
+
+- Supports Live Streaming.
+- Supports Live Radio Streaming.
+- Supports Video Files Streaming.
+- Supports YouTube Live Streaming.
+- User Account Protection (PM Guard)
+
+## Deploy Own Bot
+
+### Heroku (Don't Complain)
+<p><a href="https://heroku.com/deploy?template=https://github.com/1uci/luxeclubstreamer"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
+
+## Commands (Set In Botfather)
+```sh
+start - Start The Bot
+help - Show Help Message
+play - Start Audio Streaming
+stream - Start Video Streaming
+pause - Pause The Current Stream
+resume - Resume The Paused Stream
+endstream - Stop Streaming & Left VC
+```
+
+## Config Vars
+1. `API_ID` : User Account Telegram API_ID, get it from my.telegram.org
+2. `API_HASH` : User Account Telegram API_HASH, get it from my.telegram.org
+3. `BOT_TOKEN` : Your Telegram Bot Token, get it from @Botfather XD
+4. `SESSION_STRING` : Pyrogram Session String of User Account, get it from [@genStr robot](http://t.me/genStr_robot) or [![genStr](https://img.shields.io/badge/repl.it-genStr-yellowgreen)](https://repl.it/@AsmSafone/genStr)
+5. `ASSISTANT_NAME` : Your Video Player's assistant username without @.
+6. `SUPPORT_GROUP` : Support Group username without @ [Leave this if you don't have one]
+7. `UPDATES_CHANNEL` : Updates Channel username without @ [Leave this if you don't have one]
+8. `SUDO_USERS` : ID of Users who can use Admins commands (for multiple users seperated by space)
+9. `REPLY_MESSAGE` : A reply to those who message the USER account in PM. Leave it blank if you do not need this feature.
+
+## Requirements
+- Python 3.6 or Higher.
+- Latest [FFmpeg Python](https://www.ffmpeg.org/).
+- [Telegram API key](https://docs.pyrogram.org/intro/quickstart#enjoy-the-api).
+- Pyrogram [String Session](http://t.me/genStr_robot) Of The Account.
+- The User Account Needs To Be An Admin In The Group / Channel.
+
+## Self Host
+```sh
+$ git clone -b main https://github.com/1uci/luxeclubstreamer
+$ cd VideoPlayerBot
+$ sudo apt-get install python3-pip ffmpeg
+$ pip3 install -U pip
+$ pip3 install -U -r requirements.txt
+# <create .env variables appropriately>
+$ python3 main.py
+```
+
+## License
+```sh
+VideoPlayerBot, Telegram Video Chat Bot
+Copyright (c) 2022  1ucifer23 <https://github.com/1uci/luxeclubstreamer>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>
+```
+
+## Credits
+
+- [Me](https://github.com/1uci) for [Noting](https://github.com/1uci/luxeclubstreamer)
